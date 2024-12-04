@@ -60,7 +60,7 @@ function reiniciarJogo() {
 }
 
 let listaDeNumerosPassados = [];
-let numeroMaximo = 4;
+let numeroMaximo = 100;
 let tentativas = 0;
 let numeroAleatorio = gerarNumeroAleatorio();
 telaInicial();
