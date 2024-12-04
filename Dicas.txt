@@ -1,5 +1,6 @@
 Para auxiliar no .gitignore temos alguns sites que geram o arquivo para cada linguagem.
 Cada linguagem ja tem um "padrao" de arquivos a ignorar.
+site que cria o .gitignore - gitignore.io 
 
 No gitignore temos alguns exemplos:
 temp/ - Vai ignorar pasta "temp"
