@@ -21,5 +21,47 @@ function verificarPalindromo(){
     }
 }
 
-verificarPalindromo();
-ordenarNumeros();
+// desafio de separar numeros de string:
+function separarNumeros(){
+    let d = prompt("digite numeros separados por virgula:");
+    let e = d.split(",");
+    for(let i = 0; i < e.length; i++) {
+        console.log(e[i]);  
+    }  
+}
+
+// desafio par ou impar:
+function parOuImpar(){
+    let f = prompt("Digite um numero:");
+    if (f % 2 == 0) {
+        alert(`O numero ${f} é par!`);
+    } else {
+        alert(`O numero ${f} é impar!`);
+    }
+    if (confirm("Quer ir novamente?")) {
+        parOuImpar();
+    }
+}
+
+// desafio de conversao de temperatura:
+function conversorTemperatura(){
+    let h = parseFloat(prompt("Qual temperatura quer converter?").replace(',', '.')); // garante que se entrar com virgula ou ponto sera entendido como numero decimal
+    if (!isNaN(h)) {
+        if (confirm("Voce quer converter de Celsius para Fahrenheit? Se clicar em cancelar faremos de Fahrenheit para Celsius.")) {
+            h = ((1.8 * h) + 32)
+            alert(`É ${h.toFixed(2)}F`);
+        } else { 
+            h = ((h - 32) / 1.8); 
+            alert(`É ${h.toFixed(2)}C`);
+        }
+        if (confirm("Quer ir novamente?")) {
+            conversorTemperatura();
+        }
+    } else { alert("Digite um numero válido!");conversorTemperatura();}
+}
+
+conversorTemperatura();
+//parOuImpar();
+//separarNumeros();
+//verificarPalindromo();
+//ordenarNumeros();
